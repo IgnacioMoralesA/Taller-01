@@ -10,15 +10,20 @@ public class Taller_01 {
         menu();
     }
 
-
     private static void menu() {
         int i = (int) ((Math.random()*20)+1);
         int[] arreglo = new int[i];
-        llenarC(arreglo);
+        llenarC(arreglo);// llena el arreglo hasta 15
+        mostrararr(arreglo);//muestra el arreglo
+        salto();// estetica
+        precioP(arreglo);//genera el precio por celda
         mostrararr(arreglo);
-        precioP(arreglo);
-        mostrararr(arreglo);
-        sumaT(arreglo);
+        salto();
+        sumaT(arreglo);//suma del total del arreglo
+    }
+
+    private static void salto() {
+        System.out.println(" ");
     }
 
     private static void sumaT(int[] array) {
@@ -26,7 +31,7 @@ public class Taller_01 {
         for (int i=0;i<array.length;i++){
             Total+=array[i];
         }
-        mostrarT(Total);
+        mostrarT(Total);//muestra el total
     }
 
     private static void mostrarT(int total) {
